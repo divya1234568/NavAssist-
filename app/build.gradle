@@ -50,4 +50,134 @@ dependencies {
 
     // Location
     implementation 'com.google.android.gms:play-services-location:21.2.0'
+    
 }
+implementation 'androidx.multidex:multidex:2.0.1'
+```
+
+---
+
+## STEP 2 — Create a Signed AAB in Android Studio
+
+1. Open Android Studio → Open your `NavAssistFull` project
+2. Click **Build** in top menu
+3. Click **Generate Signed Bundle / APK**
+4. Select **Android App Bundle** → click Next
+5. Click **Create new...** under Key store path
+6. Fill in:
+   - Key store path: save it somewhere safe like `Desktop/navassist-key.jks`
+   - Password: make a strong password (write it down, you can NEVER recover it)
+   - Key alias: `navassist`
+   - Key password: same as above
+   - First and Last Name: your name
+   - Country Code: `IN`
+7. Click OK → Next → select **Release** → Finish
+8. Wait — Android Studio will create a `.aab` file in `app/release/` folder
+
+---
+
+## STEP 3 — Create a Privacy Policy (Free)
+
+1. Go to **https://www.privacypolicygenerator.info**
+2. Fill in:
+   - App name: `NavAssist`
+   - Developer name: your name
+   - Email: your email
+   - Check these boxes: Location, Camera, Microphone, SMS
+3. Click Generate
+4. Copy the full text
+
+Now host it free on GitHub:
+1. Go to **github.com** → Sign up / Login
+2. Click **New Repository** → name it `navassist-privacy`
+3. Check **Add README file** → Create
+4. Click the README file → Edit (pencil icon)
+5. Paste your privacy policy text → Commit
+6. Go to **Settings → Pages → Source → main branch** → Save
+7. Your privacy policy URL will be: `https://YOURNAME.github.io/navassist-privacy`
+
+---
+
+## STEP 4 — Create Google Play Console Account
+
+1. Go to **play.google.com/console**
+2. Sign in with Google account
+3. Pay the **one-time $25 registration fee**
+4. Fill in your developer name and details
+
+---
+
+## STEP 5 — Create Your App in Play Console
+
+1. Click **Create app**
+2. Fill in:
+   - App name: `NavAssist`
+   - Default language: `English`
+   - App or Game: **App**
+   - Free or Paid: **Free**
+3. Click Create app
+
+---
+
+## STEP 6 — Fill in App Content (Very Important)
+
+Go to **Policy → App Content** and fill ALL sections:
+
+**Privacy Policy:**
+- Paste your GitHub Pages URL from Step 3
+
+**Ads:**
+- Select: **No, app does not contain ads**
+
+**App Access:**
+- Select: **All functionality is available without special access**
+
+**Content Rating:**
+- Click Start questionnaire
+- Category: **Utility**
+- Answer all questions (all No for violence/sexual content etc.)
+- Submit → you will get a rating (Everyone)
+
+**Target Audience:**
+- Select: **18 and above**
+
+**Permissions Declaration:**
+Click each permission and explain:
+| Permission | Your explanation |
+|-----------|-----------------|
+| CAMERA | Used to scan surroundings and identify objects for visually impaired users |
+| RECORD_AUDIO | Used for always-on voice commands for blind users |
+| ACCESS_FINE_LOCATION | Used to send live GPS location in SOS emergency alerts |
+| SEND_SMS | Used to send SOS emergency alerts with location to guardian |
+| VIBRATE | Used to alert deaf users through vibration |
+
+---
+
+## STEP 7 — Upload Your AAB File
+
+1. Go to **Release → Production → Create new release**
+2. Click **Upload** → select the `.aab` file from Step 2
+3. Fill in release notes:
+   - Example: `First release - NavAssist helps visually impaired, deaf and mobility impaired users navigate safely`
+4. Click Save → Review release → Start rollout
+
+---
+
+## STEP 8 — Store Listing (Required)
+
+Go to **Store Presence → Main Store Listing** and fill:
+
+- **App name:** NavAssist
+- **Short description:** Smart navigation assistant for visually and mobility impaired users
+- **Full description:**
+```
+NavAssist is a free accessibility app designed for visually impaired, 
+deaf, and mobility impaired users.
+
+FEATURES:
+- Always-on voice commands for blind users — hands-free control
+- AI camera that identifies objects and reads text aloud
+- One-tap SOS emergency alert with live GPS location sent to guardian
+- Guardian sync via pairing code — no internet required
+- Google Maps navigation integration
+- Works fully offline except for maps
