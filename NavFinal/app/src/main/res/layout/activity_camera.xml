@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="#000000">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="56dp"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:padding="10dp" android:background="#000000">
+        <Button android:id="@+id/btn_back2" android:layout_width="48dp" android:layout_height="48dp"
+            android:text="←" android:textColor="#FFFFFF" android:backgroundTint="#1E2540" android:layout_marginEnd="10dp"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="📸 AI Scanner" android:textSize="17sp" android:textStyle="bold" android:textColor="#FFFFFF"/>
+        <Button android:id="@+id/btn_toggle2" android:layout_width="wrap_content" android:layout_height="40dp"
+            android:text="📝 Text" android:textSize="12sp" android:textColor="#FFFFFF"
+            android:backgroundTint="#0057FF" android:paddingStart="10dp" android:paddingEnd="10dp"/>
+    </LinearLayout>
+    <androidx.camera.view.PreviewView android:id="@+id/cam_preview"
+        android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1.4"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+        android:orientation="vertical" android:background="#141929" android:padding="16dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="🔍 DETECTED" android:textSize="11sp" android:textStyle="bold"
+            android:textColor="#8B97C4" android:layout_marginBottom="8dp"/>
+        <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <TextView android:id="@+id/tv_res" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Scanning..." android:textColor="#E8EEFF" android:textSize="15sp" android:lineSpacingExtra="4dp"/>
+        </ScrollView>
+        <Button android:id="@+id/btn_speak2" android:layout_width="match_parent" android:layout_height="52dp"
+            android:text="🔊 Read Aloud" android:textSize="16sp" android:textStyle="bold"
+            android:textColor="#FFFFFF" android:backgroundTint="#0057FF" android:layout_marginTop="10dp"/>
+    </LinearLayout>
+</LinearLayout>
