@@ -10,10 +10,11 @@ android {
         applicationId "com.navassist"
         minSdk 26
         targetSdk 34
+        compileSdk 34
         versionCode 2
         versionName "2.0"
+        multiDexEnabled true
     }
-
     buildTypes {
         release {
             minifyEnabled false
