@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000000">
+
+    <!-- Top Bar -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="56dp"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:padding="10dp" android:background="#000000">
+        <Button android:id="@+id/btn_back2"
+            android:layout_width="48dp" android:layout_height="48dp"
+            android:text="←" android:textSize="20sp" android:textColor="#FFFFFF"
+            android:backgroundTint="#1E2540" android:layout_marginEnd="10dp"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="📸 AI Object Scanner"
+            android:textSize="16sp" android:textStyle="bold" android:textColor="#FFFFFF"/>
+        <TextView android:id="@+id/tv_scan_status"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="⏳ Starting..." android:textSize="11sp"
+            android:textColor="#00C97B" android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- Camera + Overlay -->
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+
+        <androidx.camera.view.PreviewView android:id="@+id/cam_preview"
+            android:layout_width="match_parent" android:layout_height="match_parent"/>
+
+        <!-- Object name shown over camera feed -->
+        <LinearLayout android:id="@+id/ll_result"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_gravity="bottom" android:orientation="vertical"
+            android:background="#CC000000" android:padding="16dp">
+
+            <TextView android:id="@+id/tv_object_name"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Scanning..." android:textSize="30sp" android:textStyle="bold"
+                android:textColor="#FFFFFF" android:gravity="center" android:layout_marginBottom="6dp"/>
+
+            <TextView android:id="@+id/tv_object_pos"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Point camera at any object"
+                android:textSize="15sp" android:textColor="#00C97B"
+                android:gravity="center" android:layout_marginBottom="4dp"/>
+
+            <TextView android:id="@+id/tv_object_conf"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="" android:textSize="12sp"
+                android:textColor="#8B97C4" android:gravity="center"/>
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- Bottom Buttons -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="72dp"
+        android:orientation="horizontal" android:background="#0A0F1E" android:padding="10dp">
+        <Button android:id="@+id/btn_speak2"
+            android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+            android:text="🔊 Read Aloud" android:textSize="14sp" android:textStyle="bold"
+            android:textColor="#FFFFFF" android:backgroundTint="#0057FF" android:layout_marginEnd="8dp"/>
+        <Button android:id="@+id/btn_toggle2"
+            android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+            android:text="📝 Read Text" android:textSize="14sp" android:textStyle="bold"
+            android:textColor="#FFFFFF" android:backgroundTint="#1E2540"/>
+    </LinearLayout>
+
+</LinearLayout>

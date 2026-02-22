@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="#0A0F1E">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="64dp"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:paddingStart="16dp" android:paddingEnd="16dp" android:background="#141929">
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="🛡️ Guardian Hub" android:textSize="20sp" android:textStyle="bold" android:textColor="#FFFFFF"/>
+        <Button android:id="@+id/btn_back3" android:layout_width="wrap_content" android:layout_height="40dp"
+            android:text="← Back" android:textColor="#8B97C4" android:backgroundTint="#1E2540" android:textSize="13sp"/>
+    </LinearLayout>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:padding="16dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="#141929" android:padding="16dp" android:orientation="vertical" android:layout_marginBottom="14dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="MONITORED PERSON" android:textSize="11sp" android:textStyle="bold"
+                    android:textColor="#8B97C4" android:layout_marginBottom="12dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="👤 Ravi Kumar  ● Online — Safe"
+                    android:textSize="16sp" android:textStyle="bold" android:textColor="#FFFFFF" android:layout_marginBottom="10dp"/>
+                <TextView android:id="@+id/tv_gloc" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="📍 Anna Nagar, Chennai" android:textSize="13sp" android:textColor="#E8EEFF"
+                    android:background="#1E2540" android:padding="10dp" android:layout_marginBottom="8dp"/>
+                <TextView android:id="@+id/tv_gtime" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Updated just now" android:textSize="11sp" android:textColor="#8B97C4"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginBottom="14dp">
+                <Button android:id="@+id/btn_call2" android:layout_width="0dp" android:layout_height="72dp" android:layout_weight="1"
+                    android:text="📞  Call Now" android:textSize="15sp" android:textStyle="bold"
+                    android:textColor="#FFFFFF" android:backgroundTint="#0057FF" android:layout_marginEnd="8dp"/>
+                <Button android:id="@+id/btn_msg2" android:layout_width="0dp" android:layout_height="72dp" android:layout_weight="1"
+                    android:text="💬  Message" android:textSize="15sp" android:textStyle="bold"
+                    android:textColor="#FFFFFF" android:backgroundTint="#1E2540" android:layout_marginStart="8dp"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="#141929" android:padding="16dp" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="RECENT ACTIVITY" android:textSize="11sp" android:textStyle="bold"
+                    android:textColor="#8B97C4" android:layout_marginBottom="12dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="✅  App opened — 2 min ago" android:textSize="13sp" android:textColor="#E8EEFF" android:layout_marginBottom="8dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="📸  Camera scanner used — 14 min ago" android:textSize="13sp" android:textColor="#E8EEFF" android:layout_marginBottom="8dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="🗺  Navigation started — 18 min ago" android:textSize="13sp" android:textColor="#E8EEFF" android:layout_marginBottom="8dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="✅  Arrived safely at destination" android:textSize="13sp" android:textColor="#00C97B"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
