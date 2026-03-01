@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#0A0F1E" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="24dp" android:gravity="center_horizontal">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="🧭" android:textSize="72sp" android:layout_marginTop="32dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="NavAssist" android:textSize="34sp" android:textStyle="bold"
+            android:textColor="#FFFFFF" android:layout_marginTop="8dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Smart Navigation for Everyone"
+            android:textSize="14sp" android:textColor="#8B97C4" android:layout_marginBottom="32dp"/>
+
+        <!-- Visually Impaired -->
+        <LinearLayout android:id="@+id/card_blind" android:layout_width="match_parent"
+            android:layout_height="80dp" android:background="#141929" android:orientation="horizontal"
+            android:gravity="center_vertical" android:padding="16dp" android:layout_marginBottom="12dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="👁️" android:textSize="36sp" android:layout_marginEnd="16dp"/>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Visually Impaired" android:textSize="17sp" android:textStyle="bold"
+                    android:textColor="#FFFFFF"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Voice + AI Camera" android:textSize="12sp" android:textColor="#8B97C4"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Deaf / Hard of Hearing -->
+        <LinearLayout android:id="@+id/card_deaf" android:layout_width="match_parent"
+            android:layout_height="80dp" android:background="#141929" android:orientation="horizontal"
+            android:gravity="center_vertical" android:padding="16dp" android:layout_marginBottom="12dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="👂" android:textSize="36sp" android:layout_marginEnd="16dp"/>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Deaf / Hard of Hearing" android:textSize="17sp" android:textStyle="bold"
+                    android:textColor="#FFFFFF"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Flash alerts + Vibration" android:textSize="12sp" android:textColor="#8B97C4"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Mobility Impaired -->
+        <LinearLayout android:id="@+id/card_mob" android:layout_width="match_parent"
+            android:layout_height="80dp" android:background="#141929" android:orientation="horizontal"
+            android:gravity="center_vertical" android:padding="16dp" android:layout_marginBottom="12dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="♿" android:textSize="36sp" android:layout_marginEnd="16dp"/>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Mobility Impaired" android:textSize="17sp" android:textStyle="bold"
+                    android:textColor="#FFFFFF"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Accessible routes + Ramps" android:textSize="12sp" android:textColor="#8B97C4"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ★ NEW: Dual Disability — Visually Impaired + Hard of Hearing -->
+        <LinearLayout android:id="@+id/card_dual" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:background="#1A1030"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:padding="16dp" android:layout_marginBottom="12dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="🤲" android:textSize="36sp" android:layout_marginEnd="16dp"/>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Visually Impaired + Hard of Hearing"
+                    android:textSize="16sp" android:textStyle="bold" android:textColor="#FFFFFF"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Haptic-only guidance — No sound, No screen reading needed"
+                    android:textSize="12sp" android:textColor="#9B87C4"/>
+                <!-- Haptic codes mini reference -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:layout_marginTop="8dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="1×\nRight"
+                        android:textSize="11sp" android:textColor="#00C97B"
+                        android:gravity="center" android:textStyle="bold"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="2×\nLeft"
+                        android:textSize="11sp" android:textColor="#00AAFF"
+                        android:gravity="center" android:textStyle="bold"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="3×\nBack"
+                        android:textSize="11sp" android:textColor="#FF8A3D"
+                        android:gravity="center" android:textStyle="bold"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="4×\nFront"
+                        android:textSize="11sp" android:textColor="#FFD700"
+                        android:gravity="center" android:textStyle="bold"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="5×\nHazard"
+                        android:textSize="11sp" android:textColor="#FF3C5F"
+                        android:gravity="center" android:textStyle="bold"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Guardian -->
+        <LinearLayout android:id="@+id/card_guardian" android:layout_width="match_parent"
+            android:layout_height="80dp" android:background="#1A0810" android:orientation="horizontal"
+            android:gravity="center_vertical" android:padding="16dp" android:layout_marginBottom="32dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="🛡️" android:textSize="36sp" android:layout_marginEnd="16dp"/>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Guardian / Caregiver" android:textSize="17sp" android:textStyle="bold"
+                    android:textColor="#FFFFFF"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Monitor + Receive SOS alerts" android:textSize="12sp"
+                    android:textColor="#FF8A9B"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

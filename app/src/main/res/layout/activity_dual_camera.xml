@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000000">
+
+    <!-- Top bar -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="56dp"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:padding="10dp" android:background="#000000">
+        <Button android:id="@+id/btn_dcam_back"
+            android:layout_width="48dp" android:layout_height="48dp"
+            android:text="←" android:textSize="20sp" android:textColor="#FFFFFF"
+            android:backgroundTint="#1E2540" android:layout_marginEnd="10dp"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="📸 Dual Scanner — Haptic Guide"
+            android:textSize="14sp" android:textStyle="bold" android:textColor="#FFFFFF"/>
+        <TextView android:id="@+id/tv_dcam_status"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="⏳" android:textSize="11sp"
+            android:textColor="#00C97B" android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- Haptic code reference bar -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="36dp"
+        android:background="#0F1525" android:gravity="center"
+        android:orientation="horizontal" android:paddingStart="8dp" android:paddingEnd="8dp">
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="1×=RIGHT"
+            android:textSize="11sp" android:textColor="#00C97B" android:gravity="center" android:textStyle="bold"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="2×=LEFT"
+            android:textSize="11sp" android:textColor="#00AAFF" android:gravity="center" android:textStyle="bold"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="3×=BACK"
+            android:textSize="11sp" android:textColor="#FF8A3D" android:gravity="center" android:textStyle="bold"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="4×=FRONT"
+            android:textSize="11sp" android:textColor="#FFD700" android:gravity="center" android:textStyle="bold"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="5×=HAZARD"
+            android:textSize="11sp" android:textColor="#FF3C5F" android:gravity="center" android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- Camera frame + overlays -->
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.camera.view.PreviewView android:id="@+id/dcam_preview"
+            android:layout_width="match_parent" android:layout_height="match_parent"/>
+
+        <!-- Left edge indicator -->
+        <TextView android:layout_width="52dp" android:layout_height="match_parent"
+            android:layout_gravity="start" android:gravity="center"
+            android:text="◀\n2×" android:textSize="18sp" android:textColor="#AA00AAFF"
+            android:background="#33000000" android:textStyle="bold"/>
+
+        <!-- Right edge indicator -->
+        <TextView android:layout_width="52dp" android:layout_height="match_parent"
+            android:layout_gravity="end" android:gravity="center"
+            android:text="▶\n1×" android:textSize="18sp" android:textColor="#AA00C97B"
+            android:background="#33000000" android:textStyle="bold"/>
+
+        <!-- Center reticle -->
+        <TextView android:layout_width="60dp" android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:text="+" android:textSize="36sp" android:textColor="#55FFFFFF"
+            android:gravity="center"/>
+
+        <!-- Bottom result overlay -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_gravity="bottom" android:orientation="vertical"
+            android:background="#DD000000" android:padding="14dp">
+
+            <!-- Object name — large -->
+            <TextView android:id="@+id/tv_dcam_object"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Scanning..."
+                android:textSize="32sp" android:textStyle="bold"
+                android:textColor="#FFFFFF" android:gravity="center"
+                android:layout_marginBottom="4dp"/>
+
+            <!-- Position text -->
+            <TextView android:id="@+id/tv_dcam_pos"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Point camera at surroundings"
+                android:textSize="15sp" android:textColor="#00C97B"
+                android:gravity="center" android:layout_marginBottom="6dp"/>
+
+            <!-- Haptic code currently firing -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center">
+                <TextView android:id="@+id/tv_dcam_haptic_code"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="📳"
+                    android:textSize="18sp" android:textColor="#FFD700"
+                    android:textStyle="bold" android:layout_marginEnd="12dp"/>
+                <TextView android:id="@+id/tv_dcam_haptic_meaning"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="—"
+                    android:textSize="15sp" android:textColor="#8B97C4"/>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- Bottom action bar -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="68dp"
+        android:orientation="horizontal" android:background="#0A0F1E" android:padding="10dp">
+        <Button android:id="@+id/btn_dcam_rehaptic"
+            android:layout_width="match_parent" android:layout_height="match_parent"
+            android:text="📳 Re-trigger Haptic"
+            android:textSize="15sp" android:textStyle="bold"
+            android:textColor="#FFFFFF" android:backgroundTint="#6C35DE"/>
+    </LinearLayout>
+
+</LinearLayout>
